@@ -38,13 +38,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 ErrorStatus HSEStartUpStatus;
-uint32_t ADC_ConvertedValueX = 0;
-uint32_t ADC_ConvertedValueX_1 = 0;
-__IO uint16_t  ADC1ConvertedValue = 0, ADC1ConvertedVoltage = 0, calibration_value = 0;
 
 /* Extern variables ----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 static void IntToUnicode (uint32_t value , uint8_t *pbuf , uint8_t len);
+void GPIO_Configuration(void);
 /* Private functions ---------------------------------------------------------*/
 
 /*******************************************************************************
@@ -217,8 +215,7 @@ void GPIO_Configuration(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
   
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIO_DISCONNECT | 
-                         RCC_APB2Periph_GPIO_IOAIN , ENABLE);  
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIO_DISCONNECT , ENABLE);  
   
   /* USB_DISCONNECT used as USB pull-up */
   GPIO_InitStructure.GPIO_Pin = USB_DISCONNECT_PIN;
@@ -227,6 +224,24 @@ void GPIO_Configuration(void)
   GPIO_Init(USB_DISCONNECT, &GPIO_InitStructure);
 }
 
+/*******************************************************************************
+* Function Name : EXTI_Configuration.
+* Description   : Configure the EXTI lines for Key and Tamper push buttons.
+* Input         : None.
+* Output        : None.
+* Return value  : The direction value.
+*******************************************************************************/
+void EXTI_Configuration(void)
+{
+  EXTI_InitTypeDef EXTI_InitStructure;
+  
+  /* Configure the EXTI line 18 connected internally to the USB IP */
+  EXTI_ClearITPendingBit(EXTI_Line18);
+  EXTI_InitStructure.EXTI_Line = EXTI_Line18; 
+  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+  EXTI_Init(&EXTI_InitStructure);
+}
 /*******************************************************************************
 * Function Name  : Get_SerialNum.
 * Description    : Create the serial number string descriptor.

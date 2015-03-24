@@ -27,8 +27,8 @@
 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32_IT_H
-#define __STM32_IT_H
+#ifndef __STM32F10X_IT_H
+#define __STM32F10X_IT_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "platform_config.h"
@@ -48,9 +48,10 @@ void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
 void USB_LP_CAN1_RX0_IRQHandler(void);
+void USBWakeUp_IRQHandler(void);
 void TIM3_IRQHandler(void);
 void USART1_IRQHandler(void);
 
-#endif /* __STM32_IT_H */
+#endif /* __STM32F10X_IT_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

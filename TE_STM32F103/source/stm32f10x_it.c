@@ -31,7 +31,13 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "platform_config.h"
-#include "LAN.h"
+#include "stm32f10x_it.h"
+#include "usb_istr.h"
+#include "usb_lib.h"
+#include "usb_pwr.h"
+#include "hw_config.h"
+
+//#include "LAN.h"
 #if defined LAN_USE_NRFTRANCIEVER
   #include "NRF24Tranciever.h"
 #endif
@@ -40,11 +46,6 @@
 #endif
 #include "TimeMeter.h"
 #include "DBG.h"
-
-#include "usb_istr.h"
-#include "usb_lib.h"
-#include "usb_pwr.h"
-#include "hw_config.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -197,7 +198,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void USB_FS_WKUP_IRQHandler(void)
+void USBWakeUp_IRQHandler(void)
 {
   EXTI_ClearITPendingBit(EXTI_Line18);
 }

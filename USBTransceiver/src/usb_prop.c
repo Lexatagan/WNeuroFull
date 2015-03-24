@@ -231,7 +231,7 @@ void CustomHID_SetDeviceAddress (void)
 *******************************************************************************/
 void CustomHID_Status_In(void)
 {  
-  /*BitAction Led_State;
+  BitAction Led_State;
   
   if (Report_Buf[1] == 0)
   {
@@ -249,50 +249,50 @@ void CustomHID_Status_In(void)
   case 1: /* Led 1 */ 
     if (Led_State != Bit_RESET)
     {
-      STM_EVAL_LEDOn(LED1);
+      //STM_EVAL_LEDOn(LED1);
     }
     else
     {
-      STM_EVAL_LEDOff(LED1);
+      //STM_EVAL_LEDOff(LED1);
     }
     break;
   case 2:   /* Led 2 */    
     if (Led_State != Bit_RESET)
     {
-      STM_EVAL_LEDOn(LED2);
+      //STM_EVAL_LEDOn(LED2);
     }
     else
     {
-      STM_EVAL_LEDOff(LED2);
+      //STM_EVAL_LEDOff(LED2);
     }
     break;
   case 3:/* Led 3 */    
     if (Led_State != Bit_RESET)
     {
-      STM_EVAL_LEDOn(LED3);
+      //STM_EVAL_LEDOn(LED3);
     }
     else
     {
-      STM_EVAL_LEDOff(LED3);
+      //STM_EVAL_LEDOff(LED3);
     }
     break;
   case 4:/* Led 4 */    
     if (Led_State != Bit_RESET)
     {
-      STM_EVAL_LEDOn(LED4);
+      //STM_EVAL_LEDOn(LED4);
     }
     else
     {
-      STM_EVAL_LEDOff(LED4);
+      //STM_EVAL_LEDOff(LED4);
     }
     break;
   default:
-    STM_EVAL_LEDOff(LED1);
-    STM_EVAL_LEDOff(LED2);
-    STM_EVAL_LEDOff(LED3);
-    STM_EVAL_LEDOff(LED4); 
+    //STM_EVAL_LEDOff(LED1);
+    //STM_EVAL_LEDOff(LED2);
+    //STM_EVAL_LEDOff(LED3);
+    //STM_EVAL_LEDOff(LED4); 
     break;
-  }*/
+  }
 }
 
 /*******************************************************************************

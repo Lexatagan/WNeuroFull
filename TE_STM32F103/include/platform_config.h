@@ -44,6 +44,20 @@
   #define NRF_EXTI_LINE                 EXTI_Line2
   #define NRF_NVIC_EXTI_CHANNEL         EXTI2_IRQn
 
+//******************************************************************************
+//*USB                                                                    *
+//******************************************************************************
+  #define USB_DISCONNECT                      GPIOB  
+  #define USB_DISCONNECT_PIN                  GPIO_Pin_5
+  #define RCC_APB2Periph_GPIO_DISCONNECT      RCC_APB2Periph_GPIOB
+
+//******************************************************************************
+//*hw_config                                                                    *
+//******************************************************************************
+  #define                               ID1          (0x1FFFF7E8)
+  #define                               ID2          (0x1FFFF7EC)
+  #define                               ID3          (0x1FFFF7F0)
+
   /*#define RCC_APB2Periph_DIO        RCC_APB2Periph_GPIOB
   #define DIO_PORT                  GPIOB 
   #define DO0                       GPIO_Pin_12  
