@@ -25,7 +25,6 @@
   ******************************************************************************
   */
 
-
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __USB_PWR_H
 #define __USB_PWR_H
@@ -62,9 +61,8 @@ void Resume_Init(void);
 void Resume(RESUME_STATE eResumeSetVal);
 RESULT PowerOn(void);
 RESULT PowerOff(void);
-
 /* External variables --------------------------------------------------------*/
-extern __IO uint32_t bDeviceState; /* USB device status */
+extern  __IO uint32_t bDeviceState; /* USB device status */
 extern __IO bool fSuspendEnabled;  /* true when suspend is possible */
 
 #endif  /*__USB_PWR_H*/

@@ -2163,7 +2163,7 @@
           <state>$PROJ_DIR$\..\LCDLib\library\inc</state>
           <state>$PROJ_DIR$\..\LANLib\library\inc</state>
           <state>$PROJ_DIR$\..\nRFLib\library\inc</state>
-          <state>$PROJ_DIR$\..\DBGLib\library\inc</state>
+          <state>$PROJ_DIR$\..\DBGLib\inc</state>
           <state>$PROJ_DIR$\..\Functions\inc</state>
           <state>$PROJ_DIR$\..\UARTTransceiver\library\inc</state>
         </option>
@@ -3732,7 +3732,7 @@
   <group>
     <name>DBG</name>
     <file>
-      <name>$PROJ_DIR$\..\DBGLib\library\src\DBG.c</name>
+      <name>$PROJ_DIR$\..\DBGLib\src\DBG.c</name>
     </file>
   </group>
   <group>
@@ -3748,6 +3748,40 @@
     <name>Functions</name>
     <file>
       <name>$PROJ_DIR$\..\Functions\src\Functions.c</name>
+    </file>
+  </group>
+  <group>
+    <name>LANLib</name>
+    <file>
+      <name>$PROJ_DIR$\..\LANLib\library\src\LAN.c</name>
+    </file>
+  </group>
+  <group>
+    <name>LCDLib</name>
+    <excluded>
+      <configuration>NK_STM32F103</configuration>
+      <configuration>TE_STM32F103</configuration>
+    </excluded>
+    <file>
+      <name>$PROJ_DIR$\..\LCDLib\library\src\fonts.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\LCDLib\library\src\LCD.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\LCDLib\library\src\ssd1289.c</name>
+    </file>
+  </group>
+  <group>
+    <name>nRFLib</name>
+    <file>
+      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_l01.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_stm32_hw.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\nRFLib\library\src\NRF24Tranciever.c</name>
     </file>
   </group>
   <group>
@@ -3812,40 +3846,6 @@
         </excluded>
       </file>
     </group>
-  </group>
-  <group>
-    <name>LANLib</name>
-    <file>
-      <name>$PROJ_DIR$\..\LANLib\library\src\LAN.c</name>
-    </file>
-  </group>
-  <group>
-    <name>LCDLib</name>
-    <excluded>
-      <configuration>NK_STM32F103</configuration>
-      <configuration>TE_STM32F103</configuration>
-    </excluded>
-    <file>
-      <name>$PROJ_DIR$\..\LCDLib\library\src\fonts.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\LCDLib\library\src\LCD.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\LCDLib\library\src\ssd1289.c</name>
-    </file>
-  </group>
-  <group>
-    <name>nRFLib</name>
-    <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_l01.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_stm32_hw.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\NRF24Tranciever.c</name>
-    </file>
   </group>
   <group>
     <name>TMetLib</name>

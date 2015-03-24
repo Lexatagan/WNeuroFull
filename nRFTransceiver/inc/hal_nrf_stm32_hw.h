@@ -7,7 +7,7 @@
 /* Exported types ------------------------------------------------------------*/
 
 /* Exported constants --------------------------------------------------------*/
-#ifdef USE_WNEURO_MINI
+/*#ifdef USE_WNEURO_MINI
   #define NRF_SPI                       SPI1
   #define NRF_SPI_PORT                  GPIOA  
   #define NRF_RCC_Periph_SPI            RCC_APB2Periph_SPI1
@@ -26,20 +26,6 @@
 #endif
 
 #ifdef USE_TE_STM32F103
-  #define NRF_SPI                       SPI1
-  #define NRF_SPI_PORT                  GPIOA  
-  #define NRF_RCC_Periph_SPI            RCC_APB2Periph_SPI1
-  #define NRF_RCC_Periph_GPIO           RCC_APB2Periph_GPIOA
-  #define NRF_SPI_CSN                   GPIO_Pin_1  
-  #define NRF_SPI_SCK                   GPIO_Pin_5  
-  #define NRF_SPI_MISO                  GPIO_Pin_6  
-  #define NRF_SPI_MOSI                  GPIO_Pin_7  
-  #define NRF_GPIO_CE                   GPIO_Pin_3  
-  #define NRF_GPIO_IRQ                  GPIO_Pin_2
-  #define NRF_EXTI_PORT_SOURCE          GPIO_PortSourceGPIOA
-  #define NRF_EXTI_PIN_SOURCE           GPIO_PinSource2
-  #define NRF_EXTI_LINE                 EXTI_Line2
-  #define NRF_NVIC_EXTI_CHANNEL         EXTI2_IRQn
 #endif
 
 #ifdef USE_HY_STM32MINI
@@ -91,7 +77,7 @@
   #define NRF_EXTI_PIN_SOURCE           GPIO_PinSource2
   #define NRF_EXTI_LINE                 EXTI_Line2
   #define NRF_NVIC_EXTI_CHANNEL         EXTI2_IRQn
-#endif
+#endif*/
 
 /* Exported macro ------------------------------------------------------------*/
 

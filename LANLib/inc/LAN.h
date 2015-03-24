@@ -28,30 +28,6 @@ typedef enum {
 
 
 /* Exported constants --------------------------------------------------------*/
-#ifdef USE_TE_STM32F103
-  #define LAN_USE_NRFTRANCIEVER
-  #define LAN_USE_UARTTRANCIEVER
-  #define DEFAULT_LOCAL_LAN_ADDR        "d1"
-
-#elif USE_HY_STM32MINI
-  #define LAN_USE_NRFTRANCIEVER
-  #define LAN_USE_UARTTRANCIEVER
-  #define DEFAULT_LOCAL_LAN_ADDR        "d2"
-
-#elif USE_NK_STM32F103
-  #define LAN_USE_NRFTRANCIEVER
-  #define DEFAULT_LOCAL_LAN_ADDR        "d3"
-
-#elif USE_SWTCH10
-  #define LAN_USE_NRFTRANCIEVER
-  #define DEFAULT_LOCAL_LAN_ADDR        "d2"
-
-#elif USE_WNEURO_MINI
-  #define LAN_USE_NRFTRANCIEVER
-  #define LAN_USE_UARTTRANCIEVER
-  #define DEFAULT_LOCAL_LAN_ADDR        "dm"
-
-#endif
 
 #define LAN_PACKET_LENGTH               32
 #define LAN_ADDR_LENGTH                 2

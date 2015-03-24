@@ -42,8 +42,6 @@ __IO uint32_t esof_counter =0; /* expected SOF counter */
 __IO uint32_t wCNTR=0;
 
 /* Extern variables ----------------------------------------------------------*/
-extern uint16_t In_Data_Offset;
-extern uint16_t Out_Data_Offset;
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 /* function pointers to non-control endpoints service routines */
@@ -69,7 +67,6 @@ void (*pEpInt_OUT[7])(void) =
     EP7_OUT_Callback,
   };
 
-
 /*******************************************************************************
 * Function Name  : USB_Istr
 * Description    : ISTR events interrupt service routine
@@ -90,7 +87,6 @@ void USB_Istr(void)
     /* servicing of the endpoint correct transfer interrupt */
     /* clear of the CTR flag into the sub */
     CTR_LP();
-
 #ifdef CTR_CALLBACK
     CTR_Callback();
 #endif
@@ -231,18 +227,10 @@ void USB_Istr(void)
 #endif
 } /* USB_Istr */
 
-/*******************************************************************************
-* Function Name  : USB_Istr
-* Description    : Start of frame callback function.
-* Input          : None.
-* Output         : None.
-* Return         : None.
-*******************************************************************************/
-void SOF_Callback(void)
-{
-  In_Data_Offset = 0;
-  Out_Data_Offset = 0;
-}
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
+
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 

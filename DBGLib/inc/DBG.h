@@ -20,7 +20,7 @@
 //#define PIN1_TRANSMITTING
 #define PIN2_IRQPROCESSING
 
-#ifdef USE_HY_STM32MINI
+/*#ifdef USE_HY_STM32MINI
   #define PRINTINGDEVICE_LCD
   #define DBG_RCC_APB2Periph_LED    RCC_APB2Periph_GPIOB
   #define DBG_LED_PORT              GPIOB  
@@ -46,7 +46,7 @@
   #define LED1                      GPIO_Pin_2  
   #define LED2                      GPIO_Pin_2  
 
-#endif
+#endif*/
 
 #define DBG_PIN2_PULSE(P) \
   DBG_PinSet(DBG_PIN2);\

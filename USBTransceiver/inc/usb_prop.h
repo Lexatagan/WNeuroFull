@@ -4,7 +4,7 @@
   * @author  MCD Application Team
   * @version V4.0.0
   * @date    21-January-2013
-  * @brief   All processing related to Mass Storage Demo (Endpoint 0)
+  * @brief   All processing related to Custom HID demo
   ******************************************************************************
   * @attention
   *
@@ -27,41 +27,57 @@
 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __usb_prop_H
-#define __usb_prop_H
+#ifndef __USB_PROP_H
+#define __USB_PROP_H
 
 /* Includes ------------------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
+typedef enum _HID_REQUESTS
+{
+  GET_REPORT = 1,
+  GET_IDLE,
+  GET_PROTOCOL,
+
+  SET_REPORT = 9,
+  SET_IDLE,
+  SET_PROTOCOL
+} HID_REQUESTS;
+
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
-void Speaker_init(void);
-void Speaker_Reset(void);
-void Speaker_SetConfiguration(void);
-void Speaker_SetDeviceAddress (void);
-void Speaker_Status_In (void);
-void Speaker_Status_Out (void);
-RESULT Speaker_Data_Setup(uint8_t);
-RESULT Speaker_NoData_Setup(uint8_t);
-RESULT Speaker_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting);
-uint8_t *Speaker_GetDeviceDescriptor(uint16_t );
-uint8_t *Speaker_GetConfigDescriptor(uint16_t);
-uint8_t *Speaker_GetStringDescriptor(uint16_t);
-uint8_t *Mute_Command(uint16_t Length);
+void CustomHID_init(void);
+void CustomHID_Reset(void);
+void CustomHID_SetConfiguration(void);
+void CustomHID_SetDeviceAddress (void);
+void CustomHID_Status_In (void);
+void CustomHID_Status_Out (void);
+RESULT CustomHID_Data_Setup(uint8_t);
+RESULT CustomHID_NoData_Setup(uint8_t);
+RESULT CustomHID_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting);
+uint8_t *CustomHID_GetDeviceDescriptor(uint16_t );
+uint8_t *CustomHID_GetConfigDescriptor(uint16_t);
+uint8_t *CustomHID_GetStringDescriptor(uint16_t);
+RESULT CustomHID_SetProtocol(void);
+uint8_t *CustomHID_GetProtocolValue(uint16_t Length);
+RESULT CustomHID_SetProtocol(void);
+uint8_t *CustomHID_GetReportDescriptor(uint16_t Length);
+uint8_t *CustomHID_GetHIDDescriptor(uint16_t Length);
+
 
 /* Exported define -----------------------------------------------------------*/
-#define Speaker_GetConfiguration          NOP_Process
-//#define Speaker_SetConfiguration          NOP_Process
-#define Speaker_GetInterface              NOP_Process
-#define Speaker_SetInterface              NOP_Process
-#define Speaker_GetStatus                 NOP_Process
-#define Speaker_ClearFeature              NOP_Process
-#define Speaker_SetEndPointFeature        NOP_Process
-#define Speaker_SetDeviceFeature          NOP_Process
-//#define Speaker_SetDeviceAddress          NOP_Process
-#define GET_CUR                           0x81
-#define SET_CUR                           0x01
+#define CustomHID_GetConfiguration          NOP_Process
+//#define CustomHID_SetConfiguration          NOP_Process
+#define CustomHID_GetInterface              NOP_Process
+#define CustomHID_SetInterface              NOP_Process
+#define CustomHID_GetStatus                 NOP_Process
+#define CustomHID_ClearFeature              NOP_Process
+#define CustomHID_SetEndPointFeature        NOP_Process
+#define CustomHID_SetDeviceFeature          NOP_Process
+//#define CustomHID_SetDeviceAddress          NOP_Process
 
-#endif /* __usb_prop_H */
+#define REPORT_DESCRIPTOR                  0x22
+
+#endif /* __USB_PROP_H */
+
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
