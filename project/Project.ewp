@@ -2161,11 +2161,11 @@
           <state>$PROJ_DIR$\..\Libraries\STM32_USB-FS-Device_Lib_V4.0.0\inc</state>
           <state>$PROJ_DIR$\..\TMetLib\library\inc</state>
           <state>$PROJ_DIR$\..\LCDLib\library\inc</state>
-          <state>$PROJ_DIR$\..\LANLib\library\inc</state>
-          <state>$PROJ_DIR$\..\nRFLib\library\inc</state>
+          <state>$PROJ_DIR$\..\LANLib\inc</state>
+          <state>$PROJ_DIR$\..\nRFTransceiver\inc</state>
           <state>$PROJ_DIR$\..\DBGLib\inc</state>
           <state>$PROJ_DIR$\..\Functions\inc</state>
-          <state>$PROJ_DIR$\..\UARTTransceiver\library\inc</state>
+          <state>$PROJ_DIR$\..\UARTTransceiver\inc</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -3775,13 +3775,13 @@
   <group>
     <name>nRFLib</name>
     <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_l01.c</name>
+      <name>$PROJ_DIR$\..\nRFTransceiver\src\hal_nrf_l01.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\hal_nrf_stm32_hw.c</name>
+      <name>$PROJ_DIR$\..\nRFTransceiver\src\hal_nrf_stm32_hw.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\nRFLib\library\src\NRF24Tranciever.c</name>
+      <name>$PROJ_DIR$\..\nRFTransceiver\src\NRF24Tranciever.c</name>
     </file>
   </group>
   <group>

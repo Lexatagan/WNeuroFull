@@ -143,7 +143,7 @@ uint8_t Cnt = 0;
     DBG_PAUSE(300);                                                            //1800 - 300us
   }
   return TRUE;
-/*u16 t = 1200;
+u16 t = 1200;
   while(t--)
   {
     if (hal_nrf_get_carrier_detect())

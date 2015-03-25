@@ -3,7 +3,7 @@
 #define __LAN_H
 
 
-#if defined (STM32F10X_LD) || defined (STM32F10X_MD) || defined (STM32F10X_HD) || defined (STM32F10X)
+#if defined (STM32F10X_LD) || defined (STM32F10X_MD) || defined (STM32F10X_HD)
   #define STM32F10X
 #endif
 
